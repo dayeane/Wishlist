@@ -5,3 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+user = User.create(name: "jane", email_address: "jane@example.com",password: "1234567")
+
+item = Item.create(name: "lamp", description:"shine very iluminate" , image_url: "beautiful")
+
+user.lists.create(name: "home")
+
+list.items << item
