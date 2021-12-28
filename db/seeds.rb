@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 user = User.create(name: "jane", email_address: "jane@example.com",password: "1234567")
 
-item = Item.create(name: "lamp", description:"shine very iluminate" , image_url: "beautiful")
+item = Item.create(name: "lamp", description:"shine very iluminate" , image_url: Faker::LoremFlickr.image(size: “320x240” ,search_terms: ['sports', 'fitness']))
 
 user.lists.create(name: "home")
 
