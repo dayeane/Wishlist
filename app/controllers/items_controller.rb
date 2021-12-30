@@ -1,6 +1,6 @@
 class ItemsController < ApplicationController
   def index
-    items = Items.all
+    items = Item.all
     render json: items, status: :ok
     # render json: items.all se puede de esta manera
   end
@@ -15,9 +15,15 @@ class ItemsController < ApplicationController
     render json: item, status: :created
   end
 
+  def update
+    item = Item.find(params[:id])
+    item.update!(item_params)
+    render json: item, status: :accepted
+  end
+
   def destroy
     item = Item.find(params[:id])
-    render json: item, status: :destroyed
+    render json: item.destroy, status: :ok
   end
   private 
 
