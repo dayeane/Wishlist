@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 2021_12_28_182734) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "items", force: :cascade do |t|
     t.string "name"
     t.string "description"
@@ -21,13 +24,13 @@ ActiveRecord::Schema.define(version: 2021_12_28_182734) do
   end
 
   create_table "items_lists", id: false, force: :cascade do |t|
-    t.integer "list_id", null: false
-    t.integer "item_id", null: false
+    t.bigint "list_id", null: false
+    t.bigint "item_id", null: false
   end
 
   create_table "lists", force: :cascade do |t|
     t.string "name"
-    t.integer "user_id", null: false
+    t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_lists_on_user_id"
