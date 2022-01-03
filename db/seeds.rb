@@ -10,6 +10,7 @@ p "creating Items"
 (0..20).each do
   Item.create(name: Faker::Movies::StarWars.character, description: Faker::Movies::StarWars.quote, image_url: Faker::LoremFlickr.image(size: "320x240" , search_terms: ['Starwars']))
 end
+  
 
 ["Nicholas", "Ryan", "Dayeane"].each do |name|
   p "creating User #{name}"
