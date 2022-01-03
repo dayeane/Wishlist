@@ -9,6 +9,7 @@ import ItemContainer from './ItemContainer'
 function App() {
 
   const [items, setItems] = useState([])
+  const [search, setSearch] = useState(" ")
   
 
   useEffect(() => {
@@ -17,13 +18,16 @@ function App() {
     .then(setItems)
   },[])
 
-
+  const itemToDisplay = items.filter(item => {
+    return item.name.toLowerCase().includes(search)
+  })
 
   return (
     <div className="App">
  
     <Header />
-    <ItemContainer />
+    <Nav search={search} setSearch={setSearch}/> 
+    <ItemContainer items={itemToDisplay}/>
     </div>
   );
 }
