@@ -8,7 +8,14 @@ function ItemContainer({filteredItems, items, setItems}) {
 
     return (
     <>
-        <div>{cardItems}</div>
+        <div class="card mt-5">
+            <div class="card-header">
+                All Items
+            </div>
+            <div class="card-body d-flex justify-content-around flex-wrap">
+                {cardItems}
+            </div>
+        </div>
         <ItemCreateForm items={items} setItems={setItems}/>
     </>
     )

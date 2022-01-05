@@ -29,23 +29,27 @@ function ItemCreateForm({items, setItems}){
   return (
     <div className='card mt-5'>
       <div className="card-header"><h2>Add a New Item</h2></div>
-      <form onSubmit={handleNewItem}>
-        <label></label>
-        <input  placeholder="Name" ref={name} type="text" id="name" name="name" />
-
-        <label></label>
-        <input  placeholder="Description" ref={description} type="text" id="description" name="description" />
-
-        <label></label>
-        <input  placeholder="Image_url" ref={image_url} type="text" id="image_url" name="image_url" />
-
-        <label></label>
-        <input  placeholder="Price" ref={price} type="text" id="price" name="price" />
-
-        <div>
-        <table className="table table-striped"></table>
-        <input className=" btn btn-primary row col-2 mt-3 mb-3" type="submit" value=" Add Item "/>
+      <form onSubmit={handleNewItem} style={{padding: "20px"}}>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <input className="form-control" placeholder="Name" ref={name} type="text" id="name" name="name" />
+          </div>
+          
+          <div class="form-group col-md-6">
+            <input className="form-control"  placeholder="Description" ref={description} type="text" id="description" name="description" />
+          </div>
         </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <input className="form-control" placeholder="Image_url" ref={image_url} type="text" id="image_url" name="image_url" />
+          </div>
+
+          <div class="form-group col-md-6">
+            <input className="form-control" placeholder="Price" ref={price} type="text" id="price" name="price" />
+          </div>
+        </div>
+        <button className="btn btn-primary mt-3 mb-3" type="submit" value="Add Item">Submit</button>
+
       </form>
            
     </div>
