@@ -3,9 +3,13 @@
 function Header() {
 
     return (
-        <div>
+        <div className="card text-white bg-info mb-3">
+            <div className="card-header d-flex justify-content-between"></div>
             <h1>WishList</h1>
-            <p>logout button here</p>
+
+            <div className="card-body">
+            <p><span className="font-weight-bold">logout button here</span></p>
+            </div>
         </div>
     )
 }

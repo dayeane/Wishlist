@@ -1,7 +1,7 @@
 
 
 
-function ItemCard({name,description,image}) {
+function ItemCard({name, description, image, price}) {
 
     return (
         <div>
@@ -9,6 +9,7 @@ function ItemCard({name,description,image}) {
 
                 <h2>{name}</h2>
                 <p>{description}</p>
+                <p>{price}</p>
                 <img src={image} alt='products'></img>
                 
                 {/* <select name='wishlist' onChange={handleChange}>

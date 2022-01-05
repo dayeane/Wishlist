@@ -11,7 +11,7 @@ import SignupForm from './SignupForm'
 function App() {
 
   const [items, setItems] = useState([])
-  const [search, setSearch] = useState(" ")
+  const [search, setSearch] = useState("")
   const [user, setUser] = useState(null);
 
   useEffect(() => {
@@ -33,7 +33,7 @@ function App() {
     setUser(null);
   }
 
-  const itemToDisplay = items.filter(item => {
+  const filteredItems = items.filter(item => {
     return item.name.toLowerCase().includes(search)
   })
 
@@ -43,7 +43,7 @@ function App() {
       <h2>Welcome, {user.name}!</h2>;
        <Header />
        <Nav search={search} setSearch={setSearch} onLogout={onLogout}/> 
-       <ItemContainer items={itemToDisplay}/>
+       <ItemContainer filteredItems={filteredItems} items={items} setItems={setItems}/>
     </div>
     )
   } else {
@@ -64,7 +64,7 @@ function App() {
  
     //   <Header />
     //   <Nav search={search} setSearch={setSearch}/> 
-    //   <ItemContainer items={itemToDisplay}/>
+    //   <ItemContainer items={filteredItems}/>
     // </div>
   //  );
 }
