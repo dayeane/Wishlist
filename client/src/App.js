@@ -4,6 +4,7 @@ import Header from './Header'
 import Nav from './Nav'
 import ItemContainer from './ItemContainer'
 import Login from './Login'
+import SignupForm from './SignupForm'
 
 // import './App.css';
 
@@ -46,7 +47,12 @@ function App() {
     </div>
     )
   } else {
-    return <Login onLogin={setUser} />;
+    return (
+    <div>
+      <Login onLogin={setUser} />
+      <SignupForm setUser={setUser}/>
+    </div>
+    )
   }
     
 
