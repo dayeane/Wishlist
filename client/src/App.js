@@ -53,7 +53,7 @@ function App() {
     return (
     <div className="App">
 
-       <Header user={user}/>
+       <Header user={user} onLogout={onLogout}/>
        <Nav search={search} setSearch={setSearch} onLogout={onLogout}/> 
        <Switch>
          <Route path='/wishlist'>
@@ -67,11 +67,6 @@ function App() {
          </Route>
         
        </Switch>
-       
-
-       <Header user={user} onLogout={onLogout}/>
-       <Nav search={search} setSearch={setSearch} /> 
-       <ItemContainer filteredItems={filteredItems} items={items} setItems={setItems}/>
 
     </div>
     )

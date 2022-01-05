@@ -3,11 +3,11 @@ import { Link } from 'react-router-dom';
 function Nav({search, setSearch}) {
 
 
-    function handleLogout() {
-        fetch("/logout", {
-          method: "DELETE",
-        }).then(() => onLogout());
-      }
+    // function handleLogout() {
+    //     fetch("/logout", {
+    //       method: "DELETE",
+    //     }).then(() => onLogout());
+    //   }
 
 
 
