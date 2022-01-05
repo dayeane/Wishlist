@@ -10,7 +10,7 @@ function ItemContainer({filteredItems, items, setItems}) {
     <>
         <div class="card mt-5">
             <div class="card-header">
-                All Items
+                <h3>All Items</h3>
             </div>
             <div class="card-body d-flex justify-content-around flex-wrap">
                 {cardItems}

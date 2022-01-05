@@ -40,8 +40,7 @@ function App() {
   if (user && user.name) {
     return (
     <div className="App">
-      <h2>Welcome, {user.name}!</h2>;
-       <Header />
+       <Header user={user}/>
        <Nav search={search} setSearch={setSearch} onLogout={onLogout}/> 
        <ItemContainer filteredItems={filteredItems} items={items} setItems={setItems}/>
     </div>
