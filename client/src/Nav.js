@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 
-function Nav({search, setSearch, onLogout}) {
+function Nav({search, setSearch}) {
+
 
     function handleLogout() {
         fetch("/logout", {
@@ -8,13 +9,17 @@ function Nav({search, setSearch, onLogout}) {
         }).then(() => onLogout());
       }
 
+
+
     return (
         <div>
+
             {/* <div style = {{backgroundColor: 'gray'}}> */}
                 {/* <input type="text"
                 value= {search} 
                 onChange={(e)=>setSearch(e.target.value)}>
                 </input> */}
+
 
                 {/* <button type="button" style={{float:'right', paddingRight: '10px;' }}>Create Wishlist</button> */}
 {/* 
@@ -24,6 +29,7 @@ function Nav({search, setSearch, onLogout}) {
                     <option value="three">Wishlist 3</option>
                     <option value="four">Wishlist 4</option>  
                 </select> */}
+
 
                 {/* <header>
                 <button onClick={handleLogout}>Logout</button>
@@ -56,6 +62,11 @@ function Nav({search, setSearch, onLogout}) {
                 </div>
             </nav>
         </div>
+
+             
+
+            </div>
+
         </div>
     )
 }

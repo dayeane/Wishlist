@@ -6,6 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+Item.destroy_all
+
 p "creating Items"
 (0..20).each do
   Item.create(name: Faker::Movies::StarWars.character, price: 100, description: Faker::Movies::StarWars.quote, image_url: Faker::LoremFlickr.image(size: "320x240" , search_terms: ['Starwars']))
