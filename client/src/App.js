@@ -17,7 +17,6 @@ function App() {
   const [search, setSearch] = useState("")
   const [user, setUser] = useState(null);
 
-
   useEffect(() => {
     fetch('/items')
     .then(res => res.json())
@@ -49,9 +48,11 @@ function App() {
 
   const filteredItems = items.filter(item => item.name.toLowerCase().includes(search))
 
+
   if (user && user.name) {
     return (
     <div className="App">
+
        <Header user={user}/>
        <Nav search={search} setSearch={setSearch} onLogout={onLogout}/> 
        <Switch>
@@ -67,6 +68,11 @@ function App() {
         
        </Switch>
        
+
+       <Header user={user} onLogout={onLogout}/>
+       <Nav search={search} setSearch={setSearch} /> 
+       <ItemContainer filteredItems={filteredItems} items={items} setItems={setItems}/>
+
     </div>
     )
   } else {
