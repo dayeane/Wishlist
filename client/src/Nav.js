@@ -1,23 +1,18 @@
 
 
-function Nav({search, setSearch, onLogout}) {
+function Nav({search, setSearch}) {
 
-
-    function handleLogout() {
-        fetch("/logout", {
-          method: "DELETE",
-        }).then(() => onLogout());
-      }
 
     return (
 
         
 
         <div>
-            <div style = {{backgroundColor: 'red'}}>
+            <div style = {{backgroundColor: 'blue'}}>
                 <input type="text"
-                value= {search} 
-                onChange={(e)=>setSearch(e.target.value)}>
+                    value= {search} 
+                    placeholder = "Search Items"
+                    onChange={(e)=>setSearch(e.target.value)}>
                 </input>
 
                 <button type="button" style={{float:'right', paddingRight: '10px;' }}>Create Wishlist</button>
@@ -29,9 +24,7 @@ function Nav({search, setSearch, onLogout}) {
                     <option value="four">Wishlist 4</option>  
                 </select>
 
-                <header>
-                <button onClick={handleLogout}>Logout</button>
-                </header>
+             
 
             </div>
 

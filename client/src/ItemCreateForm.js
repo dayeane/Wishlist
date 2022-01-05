@@ -24,7 +24,11 @@ function ItemCreateForm({items, setItems}){
     })
     .then(res => res.json())
     .then(createdItem => setItems([...items, createdItem]))
+
+    e.currentTarget.reset()
+
   }
+
 
   return (
     <div className='card mt-5'>
