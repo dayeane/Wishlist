@@ -39,9 +39,9 @@ function SignupForm({ setUser }) {
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <h1>Sign Up</h1>
+        <h1 className="mt-6 mr-2">Sign Up</h1>
         <p>
-          <label htmlFor="name">name</label>
+          <label className="mr-2" htmlFor="name">Name</label>
           <input
             type="text"
             name="name"
@@ -50,7 +50,7 @@ function SignupForm({ setUser }) {
           />
         </p>
         <p>
-          <label htmlFor="email_address">Email </label>
+          <label className="mr-2" htmlFor="email_address">Email </label>
           <input
             type="text"
             name="email_address"
@@ -68,7 +68,7 @@ function SignupForm({ setUser }) {
           />
         </p> */}
         <p>
-          <button type="submit">Sign Up</button>
+          <button className="btn btn-primary mt-3 mb-3" type="submit">Sign Up</button>
         </p>
         <p>Have an account?</p>
         {/* <p>

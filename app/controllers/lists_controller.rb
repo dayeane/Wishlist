@@ -1,6 +1,7 @@
 class ListsController < ApplicationController
 
   def index
+    user.find(1).lists
     list = List.all
     render json: list, status: :ok
   end
