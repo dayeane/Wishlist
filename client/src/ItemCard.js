@@ -1,7 +1,7 @@
 
 
 
-function ItemCard({name, description, image, price}) {
+function ItemCard({ id, name, description, image, price, handleDelete}) {
 
     return (
         <div className="card mt-3" style={{width: "18rem"}}>
@@ -15,6 +15,8 @@ function ItemCard({name, description, image, price}) {
                         {list.map(l => <option value={l.id} key={l.id}>{l.name} </option>)}
                     </select> */}
             </div>
+            <button type="button" class="btn btn-danger" onClick={() => handleDelete(id)}>Delete</button>
+            {/* <button onClick={handleDelete(id)}>Delete</button> */}
         </div>
     )
 }

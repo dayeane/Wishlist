@@ -1,0 +1,60 @@
+2022-01-03 17:35:14.883 MST [75424] FATAL:  could not open directory "pg_notify": No such file or directory
+2022-01-03 17:35:14.884 MST [75424] LOG:  database system is shut down
+2022-01-03 17:44:00.803 MST [76682] LOG:  starting PostgreSQL 14.1 on x86_64-apple-darwin20.6.0, compiled by Apple clang version 13.0.0 (clang-1300.0.29.3), 64-bit
+2022-01-03 17:44:00.806 MST [76682] LOG:  listening on IPv6 address "::1", port 5432
+2022-01-03 17:44:00.806 MST [76682] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2022-01-03 17:44:00.807 MST [76682] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2022-01-03 17:44:00.811 MST [76683] LOG:  database system was shut down at 2022-01-03 17:43:53 MST
+2022-01-03 17:44:00.815 MST [76682] LOG:  database system is ready to accept connections
+2022-01-03 17:44:07.034 MST [76698] FATAL:  database "nicholasfagner" does not exist
+2022-01-03 18:02:49.340 MST [78655] FATAL:  database "nicholasfagner" does not exist
+2022-01-03 18:16:12.308 MST [78959] FATAL:  database "nicholasfagner" does not exist
+2022-01-03 18:20:59.812 MST [80053] FATAL:  database "nicholasfagner" does not exist
+2022-01-04 09:31:58.082 MST [84153] FATAL:  database "nicholasfagner" does not exist
+2022-01-04 09:32:27.432 MST [84200] LOG:  starting PostgreSQL 14.1 on x86_64-apple-darwin20.6.0, compiled by Apple clang version 13.0.0 (clang-1300.0.29.3), 64-bit
+2022-01-04 09:32:27.434 MST [84200] LOG:  could not bind IPv6 address "::1": Address already in use
+2022-01-04 09:32:27.434 MST [84200] HINT:  Is another postmaster already running on port 5432? If not, wait a few seconds and retry.
+2022-01-04 09:32:27.434 MST [84200] LOG:  could not bind IPv4 address "127.0.0.1": Address already in use
+2022-01-04 09:32:27.434 MST [84200] HINT:  Is another postmaster already running on port 5432? If not, wait a few seconds and retry.
+2022-01-04 09:32:27.434 MST [84200] WARNING:  could not create listen socket for "localhost"
+2022-01-04 09:32:27.434 MST [84200] FATAL:  could not create any TCP/IP sockets
+2022-01-04 09:32:27.435 MST [84200] LOG:  database system is shut down
+2022-01-04 09:32:56.567 MST [84371] LOG:  starting PostgreSQL 14.1 on x86_64-apple-darwin20.6.0, compiled by Apple clang version 13.0.0 (clang-1300.0.29.3), 64-bit
+2022-01-04 09:32:56.569 MST [84371] LOG:  could not bind IPv6 address "::1": Address already in use
+2022-01-04 09:32:56.569 MST [84371] HINT:  Is another postmaster already running on port 5432? If not, wait a few seconds and retry.
+2022-01-04 09:32:56.569 MST [84371] LOG:  could not bind IPv4 address "127.0.0.1": Address already in use
+2022-01-04 09:32:56.569 MST [84371] HINT:  Is another postmaster already running on port 5432? If not, wait a few seconds and retry.
+2022-01-04 09:32:56.569 MST [84371] WARNING:  could not create listen socket for "localhost"
+2022-01-04 09:32:56.569 MST [84371] FATAL:  could not create any TCP/IP sockets
+2022-01-04 09:32:56.570 MST [84371] LOG:  database system is shut down
+2022-01-04 09:34:08.745 MST [84705] FATAL:  database "nicholasfagner" does not exist
+2022-01-04 09:35:09.548 MST [84770] LOG:  starting PostgreSQL 14.1 on x86_64-apple-darwin20.6.0, compiled by Apple clang version 13.0.0 (clang-1300.0.29.3), 64-bit
+2022-01-04 09:35:09.550 MST [84770] LOG:  could not bind IPv6 address "::1": Address already in use
+2022-01-04 09:35:09.550 MST [84770] HINT:  Is another postmaster already running on port 5432? If not, wait a few seconds and retry.
+2022-01-04 09:35:09.550 MST [84770] LOG:  could not bind IPv4 address "127.0.0.1": Address already in use
+2022-01-04 09:35:09.550 MST [84770] HINT:  Is another postmaster already running on port 5432? If not, wait a few seconds and retry.
+2022-01-04 09:35:09.550 MST [84770] WARNING:  could not create listen socket for "localhost"
+2022-01-04 09:35:09.550 MST [84770] FATAL:  could not create any TCP/IP sockets
+2022-01-04 09:35:09.551 MST [84770] LOG:  database system is shut down
+2022-01-04 10:26:14.010 MST [92758] FATAL:  database "react_rails_api_project_template_development" does not exist
+2022-01-04 10:26:28.488 MST [93046] FATAL:  database "react_rails_api_project_template_development" does not exist
+2022-01-04 10:29:14.653 MST [93130] FATAL:  database "react_rails_api_project_template_development" does not exist
+2022-01-04 10:29:42.546 MST [93171] FATAL:  database "react_rails_api_project_template_development" does not exist
+2022-01-04 10:45:14.280 MST [93375] FATAL:  database "react_rails_api_project_template_development" does not exist
+2022-01-04 11:14:13.124 MST [93658] FATAL:  database "react_rails_api_project_template_development" does not exist
+2022-01-04 11:20:10.672 MST [93954] FATAL:  database "nicholasfagner" does not exist
+2022-01-04 11:23:29.201 MST [94800] FATAL:  database "nicholasfagner" does not exist
+2022-01-04 11:24:06.446 MST [94842] FATAL:  database "nicholasfagner" does not exist
+2022-01-04 11:24:46.981 MST [94852] LOG:  starting PostgreSQL 14.1 on x86_64-apple-darwin20.6.0, compiled by Apple clang version 13.0.0 (clang-1300.0.29.3), 64-bit
+2022-01-04 11:24:46.984 MST [94852] LOG:  could not bind IPv6 address "::1": Address already in use
+2022-01-04 11:24:46.984 MST [94852] HINT:  Is another postmaster already running on port 5432? If not, wait a few seconds and retry.
+2022-01-04 11:24:46.984 MST [94852] LOG:  could not bind IPv4 address "127.0.0.1": Address already in use
+2022-01-04 11:24:46.984 MST [94852] HINT:  Is another postmaster already running on port 5432? If not, wait a few seconds and retry.
+2022-01-04 11:24:46.984 MST [94852] WARNING:  could not create listen socket for "localhost"
+2022-01-04 11:24:46.984 MST [94852] FATAL:  could not create any TCP/IP sockets
+2022-01-04 11:24:46.985 MST [94852] LOG:  database system is shut down
+2022-01-04 11:27:06.452 MST [76682] LOG:  could not open file "postmaster.pid": No such file or directory
+2022-01-04 11:27:06.453 MST [76682] LOG:  performing immediate shutdown because data directory lock file is invalid
+2022-01-04 11:27:06.453 MST [76682] LOG:  received immediate shutdown request
+2022-01-04 11:27:06.453 MST [76682] LOG:  could not open file "postmaster.pid": No such file or directory
+2022-01-04 11:27:06.456 MST [76682] LOG:  database system is shut down
