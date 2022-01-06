@@ -1,23 +1,24 @@
 
-function ListCard({id, name, displayItems, setListItems}){
+function ListCard({id, name, displayItems, setListItems, handleListDelete}){
 
     function displayItems(id){  
         fetch(`/lists/${id}`)
         .then(res => res.json())
         .then(setListItems)    
-    }   
-    function handleListDelete(id){
-        //Add Delete Functionality, deletes entire list and associations.
-        console.log(id)
-        // fetch(`/lists/${id}`, {
-        //     method: 'DELETE',
-        //     headers: {
-        //         'Content-Type': 'application/json'
-        //     }
-        // })
-        // .then(res => res.json())
-        // .then(() => setLists(userLists.filter(list => list.id !== id)))
-    }
+    } 
+
+    // function handleListDelete(id){
+    //     //Add Delete Functionality, deletes entire list and associations.
+    //     console.log(id)
+    //     // fetch(`/lists/${id}`, {
+    //     //     method: 'DELETE',
+    //     //     headers: {
+    //     //         'Content-Type': 'application/json'
+    //     //     }
+    //     // })
+    //     // .then(res => res.json())
+    //     // .then(() => setLists(userLists.filter(list => list.id !== id)))
+    // }
     
     return(
         <div className="card mt-3 " style={{width: "18rem", textAlign:"center"}}>

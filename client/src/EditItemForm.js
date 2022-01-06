@@ -4,7 +4,6 @@ function EditItemForm({id, name, description, image, price, updateItem}){
     const image_url = image
     const [formData, setFormData] = useState({
         name,
-        id,
         description,
         image_url,
         price,
@@ -12,7 +11,7 @@ function EditItemForm({id, name, description, image, price, updateItem}){
 
     function handleOnSubmit(e){
         e.preventDefault()
-        updateItem(formData)
+        updateItem(formData, id)
     }
 
     function handleOnChange(e){
