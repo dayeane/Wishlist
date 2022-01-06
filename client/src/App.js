@@ -13,12 +13,22 @@ import SignupForm from './SignupForm'
 
 function App() {
 
+//STATE VARIABLES
   const [items, setItems] = useState([])
   const [search, setSearch] = useState("")
   const [user, setUser] = useState(null);
   const [lists, setLists] = useState([])
 
-  // const userLists = user
+
+//INITIAL FETCHES ON PAGE LOAD AND USR VERIFICATION 
+
+  useEffect(() => {
+    fetch("/me").then((response) => {
+      if (response.ok) {
+        response.json().then((user) => setUser(user));
+      }
+    });
+  }, []);
 
   useEffect(() => {
     fetch('/items')
@@ -31,7 +41,6 @@ function App() {
     // .then(() => setLists(lists.filter(list => list.user.id === user.id)))
   },[])
 
-
   useEffect(() => {
     fetch("/me").then((response) => {
       if (response.ok) {
@@ -40,10 +49,14 @@ function App() {
     });
   }, []);
 
+
+//USER LOGOUT HANDLER
   function onLogout() {
     setUser(null);
   }
 
+
+//DELETE ITEM FETCH
   const handleItemDelete = (id) => {
     // console.log(id)
     fetch(`/items/${id}`, {
@@ -54,29 +67,41 @@ function App() {
     .then(() => setItems(items.filter(item => item.id !== id)))
 }
 
+//UPDATE ITEM FETCH
+function updateItem(formData){
+  fetch(`/items/${formData.id}`, {
+      method: "PATCH",
+      headers: {"Content-Type": "application/json"},
+      body: JSON.stringify(formData)
+  })
+  .then(res => res.json())
+  .then(updated => setItems([...items],updated))
+}
+
+// ITEM AND LIST VARIABLES THAT HOLD STATE
   const filteredItems = items.filter(item => item.name.toLowerCase().includes(search.toLowerCase()))
   const listsDisplay = user ? lists.filter(list => list.user.id === user.id) : lists
 
   if (user && user.name) {
     // console.log(user.id)
     return (
-    <div className="App">
 
+    <div className="App">
        <Header user={user} onLogout={onLogout}/>
        <Nav search={search} setSearch={setSearch} onLogout={onLogout}/> 
        <Switch>
          <Route path='/wishlist'>
-          <WishList userLists={listsDisplay} />
+          <WishList userLists={listsDisplay} user={user} setLists={setLists}/>
          </Route>
          <Route path="/itemcontainer">
-         <ItemContainer filteredItems={filteredItems} items={items} setItems={setItems} handleDelete={handleItemDelete} lists={listsDisplay}/>
+         <ItemContainer filteredItems={filteredItems} items={items} setItems={setItems} handleDelete={handleItemDelete} lists={listsDisplay} updateItem={updateItem}/>
          </Route>
          <Route path="/">
           <HomePage />
          </Route>
        </Switch>
-
     </div>
+
     )
   } else {
     return (
@@ -86,19 +111,6 @@ function App() {
     </div>
     )
   }
-    
-
-
-  
-
-  //  return (
-    // <div className="App">
- 
-    //   <Header />
-    //   <Nav search={search} setSearch={setSearch}/> 
-    //   <ItemContainer items={filteredItems}/>
-    // </div>
-  //  );
 }
 
 export default App;

@@ -9,6 +9,14 @@ function ListCard({id, name, displayItems, setListItems}){
     function handleListDelete(id){
         //Add Delete Functionality, deletes entire list and associations.
         console.log(id)
+        // fetch(`/lists/${id}`, {
+        //     method: 'DELETE',
+        //     headers: {
+        //         'Content-Type': 'application/json'
+        //     }
+        // })
+        // .then(res => res.json())
+        // .then(() => setLists(userLists.filter(list => list.id !== id)))
     }
     
     return(

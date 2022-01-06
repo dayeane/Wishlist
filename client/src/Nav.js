@@ -12,7 +12,7 @@ function Nav({search, setSearch}) {
                 <div class="collapse navbar-collapse" id="navbarNav" >
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item">
-                            <Link to="/"><h5 style={{color:"white", margin: "auto", marginTop:"10px", padding:"10px"}}>Home<span class="sr-only">(current)</span></h5></Link>
+                            <Link to="/"><h5 style={{color:"white", margin: "auto", marginTop:"10px", padding:"10px", textDecoration:"none"}}>Home<span class="sr-only">(current)</span></h5></Link>
                         </li>
                         <li class="nav-item">
                             <Link to="/wishlist"><h5 style={{color:"white", margin: "auto", marginTop:"10px", padding:"10px"}}>My Wishlists</h5></Link>

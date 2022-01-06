@@ -1,11 +1,7 @@
 
 
-function ListItemCard({id, name, price, description, image}){
+function ListItemCard({id, name, price, description, image, handleListItemDelete}){
 
-    function handleListItemDelete(id){
-        //deletes item from list, does not delete item from DB
-        console.log(id)
-    }
 
     return(
         <div className="card mt-3" style={{width: "18rem"}}>
