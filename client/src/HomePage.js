@@ -3,7 +3,7 @@
 function HomePage(){
     return(
         <div>   
-            Welcome To the WishList!
+           <h4 className="mt-4 mr-2" >Welcome To the WishList!</h4> 
         </div>
     )
 }
