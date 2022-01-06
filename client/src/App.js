@@ -69,7 +69,7 @@ function App() {
           <WishList userLists={listsDisplay} />
          </Route>
          <Route path="/itemcontainer">
-         <ItemContainer filteredItems={filteredItems} items={items} setItems={setItems} handleDelete={handleItemDelete}/>
+         <ItemContainer filteredItems={filteredItems} items={items} setItems={setItems} handleDelete={handleItemDelete} lists={listsDisplay}/>
          </Route>
          <Route path="/">
           <HomePage />
