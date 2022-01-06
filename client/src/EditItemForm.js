@@ -1,34 +1,39 @@
 import {useState} from 'react'
 
-function EditItemForm({id}){
-    const [formData, setFormData] = useState("")
+function EditItemForm({id, name, description, image, price, updateItem}){
+    const image_url = image
+    const [formData, setFormData] = useState({
+        name,
+        id,
+        description,
+        image_url,
+        price,
+    })
 
-    function handleItemEdit(e){
-        //Handle Editing of Item, will be a post to backend, must capture form data in state.
+    function handleOnSubmit(e){
         e.preventDefault()
-        console.log(id)
+        updateItem(formData)
+    }
 
+    function handleOnChange(e){
+        setFormData({...formData, [e.target.name]: e.target.value })
     }
 
     return(
         <div>
-            <form onSubmit={handleItemEdit}>
-                <div class="form-group" style={{ marginLeft:"15px", marginRight:"15px"}}>
-                    {/* <label for="exampleFormControlInput1">Name:</label> */}
-                    <input type="email" class="form-control"  placeholder="Name..."/>
+            <form onSubmit={handleOnSubmit}>
+                <div class="form-group" style={{ marginLeft:"15px", marginRight:"15px"}}>       
+                    <input type="text" class="form-control"  placeholder="Name..." name="name" value={formData.name} onChange={handleOnChange}/>
                 </div>
                 <div class="form-group" style={{ marginLeft:"15px", marginRight:"15px"}}>
-                    {/* <label for="exampleFormControlInput1">Image:</label> */}
-                    <input type="email" class="form-control"  placeholder="Image URL..."/>
+                    <input type="text" class="form-control"  placeholder="Image URL..." name="image_url" value={formData.image_url} onChange={handleOnChange}/>
                 </div>
                 <div class="form-group" style={{ marginLeft:"15px", marginRight:"15px"}}>
-                    {/* <label for="exampleFormControlInput1">Description:</label> */}
-                    <input type="email" class="form-control"  placeholder="Description..."/>
+                    <input type="text" class="form-control"  placeholder="Description..." name="description" value={formData.description} onChange={handleOnChange}/>
                 </div>
                 <div class="form-group" style={{ marginLeft:"15px", marginRight:"15px"}}>
-                    {/* <label for="exampleFormControlInput1">Price:</label> */}
-                    <input type="email" class="form-control"  placeholder="Price..."/>
-                </div>
+                    <input type="number" class="form-control"  placeholder="Price..." name="price" value={formData.price} onChange={handleOnChange}/>
+                </div> 
                 <div class="form-group" style={{marginBottom:"5px", marginLeft:"15px"}}>
                  <button type="submit" class="btn btn-secondary" >Submit Edit</button>
                  </div>

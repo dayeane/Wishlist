@@ -2,11 +2,22 @@ import ItemCard from './ItemCard'
 import ItemCreateForm from './ItemCreateForm'
 
 
-function ItemContainer({filteredItems, items, setItems, handleDelete, lists}) {
+function ItemContainer({filteredItems, items, setItems, handleDelete, lists, updateItem}) {
 
 
     
-    const cardItems = filteredItems.map(item => <ItemCard key={item.id} id={item.id} name={item.name} description={item.description} image={item.image_url} price={item.price} handleDelete={handleDelete} lists={lists}/> )
+    const cardItems = filteredItems.map(item => 
+        <ItemCard 
+            key={item.id} 
+            id={item.id} 
+            name={item.name} 
+            description={item.description} 
+            image={item.image_url} 
+            price={item.price} 
+            handleDelete={handleDelete} 
+            lists={lists}
+            updateItem={updateItem}
+            /> )
 
     return (
     <>
