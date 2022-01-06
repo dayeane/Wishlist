@@ -10,7 +10,7 @@ function Header({user, onLogout}) {
 
 
     return (
-        <nav className="navbar navbar-expand-lg navbar-light bg-light d-flex justify-content-between ">
+        <nav className="navbar navbar-expand-lg navbar-light bg-light d-flex justify-content-between">
             <a className="navbar-brand" href="/"><h2>WishList</h2></a>
             <div className="d-flex justify-content-end">
              <h5 className="mt-4 mr-2">Welcome, {user.name}!</h5>

@@ -1,6 +1,8 @@
 class ListsController < ApplicationController
 
   def index
+    # usersession
+    # user.find(params[:id]).lists
     list = List.all
     render json: list, status: :ok
   end
