@@ -23,7 +23,7 @@ function Login({ onLogin }) {
           value={username}
           onChange={(e) => setUsername(e.target.value)}
         />
-        <button type="submit">Login</button>
+        <button className="btn btn-primary mt-5 mb-5 mr-3 ml-3" type="submit">Login</button>
       </form>
     );
 }
