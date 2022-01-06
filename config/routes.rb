@@ -13,6 +13,8 @@ Rails.application.routes.draw do
   get "/me", to: "users#show"
   post '/signup', to: 'users#create'
 
+  #user wishlist route
+  get '/wishlists', to: 'users#lists'
 
 
   # Routing logic: fallback requests for React Router.

@@ -16,11 +16,19 @@ function App() {
   const [items, setItems] = useState([])
   const [search, setSearch] = useState("")
   const [user, setUser] = useState(null);
+  const [lists, setLists] = useState([])
+
+  // const userLists = user
 
   useEffect(() => {
     fetch('/items')
     .then(res => res.json())
     .then(setItems)
+
+    fetch('/lists')
+    .then(res => res.json())
+    .then(setLists)
+    // .then(() => setLists(lists.filter(list => list.user.id === user.id)))
   },[])
 
 
@@ -36,7 +44,7 @@ function App() {
     setUser(null);
   }
 
-  const handleDelete = (id) => {
+  const handleItemDelete = (id) => {
     // console.log(id)
     fetch(`/items/${id}`, {
         method: 'DELETE',
@@ -46,10 +54,11 @@ function App() {
     .then(() => setItems(items.filter(item => item.id !== id)))
 }
 
-  const filteredItems = items.filter(item => item.name.toLowerCase().includes(search))
-
+  const filteredItems = items.filter(item => item.name.toLowerCase().includes(search.toLowerCase()))
+  const listsDisplay = user ? lists.filter(list => list.user.id === user.id) : lists
 
   if (user && user.name) {
+    // console.log(user.id)
     return (
     <div className="App">
 
@@ -57,15 +66,14 @@ function App() {
        <Nav search={search} setSearch={setSearch} onLogout={onLogout}/> 
        <Switch>
          <Route path='/wishlist'>
-          <WishList/>
+          <WishList userLists={listsDisplay} />
          </Route>
          <Route path="/itemcontainer">
-         <ItemContainer filteredItems={filteredItems} items={items} setItems={setItems} handleDelete={handleDelete}/>
+         <ItemContainer filteredItems={filteredItems} items={items} setItems={setItems} handleDelete={handleItemDelete}/>
          </Route>
          <Route path="/">
           <HomePage />
          </Route>
-        
        </Switch>
 
     </div>

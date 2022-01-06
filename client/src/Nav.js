@@ -38,20 +38,20 @@ function Nav({search, setSearch}) {
             {/* </div> */}
         <div>  
             <nav class="navbar navbar-expand-lg navbar-light" style={{backgroundColor: "#0275d8", borderRadius:"10px", margin:"10px"}}>
-                <a class="navbar-brand" style={{color:"white"}}>The WishList!</a>
+                <h3 style={{color:"white", margin: "auto", padding:"10px"}}>The WishList!</h3>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <Link to="/"><a class="nav-link" style={{color:"white"}}>Home<span class="sr-only">(current)</span></a></Link>
+                        <Link to="/"><h5 style={{color:"white", margin: "auto", marginTop:"10px", padding:"10px"}}>Home<span class="sr-only">(current)</span></h5></Link>
                     </li>
                     <li class="nav-item">
-                        <Link to="/wishlist"><a class="nav-link" style={{color:"white"}}>My Wishlists</a></Link>
+                        <Link to="/wishlist"><h5 style={{color:"white", margin: "auto", marginTop:"10px", padding:"10px"}}>My Wishlists</h5></Link>
                     </li>
                     <li class="nav-item">
-                        <Link to="/itemcontainer"><a class="nav-link" style={{color:"white"}}>View Current Items</a></Link>
+                        <Link to="/itemcontainer"><h5 style={{color:"white", margin: "auto", marginTop:"10px", padding:"10px"}}>View Current Items</h5></Link>
                     </li>
  
                     </ul>
