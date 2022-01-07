@@ -3,9 +3,9 @@ import ListCard from "./ListCard"
 import ListItemCard from "./ListItemCard"
 
 
-function WishList({userLists, user, setLists}){
+function WishList({userLists, user, postList, handleListDelete}){
     const [listItems, setListItems] = useState([])
-    const [formData, setFormData] = useState({name:"", user_id:user.id})
+    const [formData, setFormData] = useState({name:"", user_id: user.id})
 
     
     function handleOnChange(e){
@@ -14,12 +14,12 @@ function WishList({userLists, user, setLists}){
     
     function handleSubmit(e){
         e.preventDefault()
-        console.log(e)
+        postList(formData)
     }
     
     const itemsToDisplay = listItems.items 
     const listItemsDisplay = itemsToDisplay?.map(item => <ListItemCard key={item.id} id={item.id} list_id={listItems.id} description={item.description} image={item.image_url} name={item.name} price={item.price} setListItems={setListItems}/>)
-    const listsDisplay = userLists.map(list => <ListCard key={list.id} id={list.id} name={list.name} setListItems={setListItems} />)
+    const listsDisplay = userLists.map(list => <ListCard key={list.id} id={list.id} name={list.name} setListItems={setListItems} handleListDelete={handleListDelete} />)
 
     return(
         <div className="card mt-5" style={{borderRadius:"10px"}}>
