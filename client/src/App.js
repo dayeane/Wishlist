@@ -76,7 +76,7 @@ function App() {
     })
     .then(res => res.json())
     .then(updatedItem => { 
-      setItems(items.map(item => item.id == updatedItem.id ? updatedItem : item))
+      setItems(items.map(item => item.id === updatedItem.id ? updatedItem : item))
     })
   }
 
