@@ -24,8 +24,8 @@ function ListCard({id, name, displayItems, setListItems}){
             <div className="card-body">
                 <h3 className="card-text">{name}</h3>
             </div>
-            <button type="button" class="btn btn-secondary" style={{marginLeft:"10px", marginRight:"10px", marginBottom:"10px"}} onClick={() => displayItems(id)}>View Items</button>
-            <button type="button" class="btn btn-danger" style={{marginLeft:"10px", marginRight:"10px", marginBottom:"10px" }} onClick={() => handleListDelete(id)}>Delete List</button>
+            <button type="button" className="btn btn-secondary" style={{marginLeft:"10px", marginRight:"10px", marginBottom:"10px"}} onClick={() => displayItems(id)}>View Items</button>
+            <button type="button" className="btn btn-danger" style={{marginLeft:"10px", marginRight:"10px", marginBottom:"10px" }} onClick={() => handleListDelete(id)}>Delete List</button>
         </div>  
     )
 }
