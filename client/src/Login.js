@@ -17,15 +17,30 @@ function Login({ onLogin }) {
     }
   
     return (
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
-        />
-        <button className="btn btn-primary mt-5 mb-5 mr-3 ml-3" type="submit">Login</button>
-      </form>
+      <div class="container">
+        <div class="h-100 justify-content-center align-items-center">
+          <form  onSubmit={handleSubmit}>
+            <h3 className="mt-6 mr-2 text-center" >Login</h3>
+            <p className="text-center">
+              <label className="mr-2" htmlFor="name">Name:</label>
+              <input 
+                type="text"
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
+              />
+            </p>
+            <p className="text-center">
+              <button className="btn btn-primary mt-3 mb-3" type="submit">Login</button>
+            </p>
+            <br></br>
+            <br></br>  
+          </form>
+          </div>
+      </div>
     );
 }
 
 export default Login
+
+
+
