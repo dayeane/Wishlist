@@ -20,7 +20,7 @@ function Login({ onLogin }) {
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-8" >
-            <div class="card mt-5" style={{borderRadius:"10px"}}>
+            <div class="card mt-5" style={{borderRadius:"10px", fontFamily:"dosis"}}>
               <div class="card-header bg-primary" style={{color:"white"}} >
                 <h3 className="text-center" >Welcome to the Wishlist App!</h3>
               </div>

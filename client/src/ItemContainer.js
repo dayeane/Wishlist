@@ -19,9 +19,9 @@ function ItemContainer({filteredItems, items, setItems, handleDelete, lists, upd
 
     return (
     <>
-        <div className="card mt-5" style={{borderRadius:"10px"}}>
+        <div className="card mt-3" style={{borderRadius:"10px", fontFamily:"dosis"}}>
             <div className="card-header">
-                <h3>All Items</h3>
+                <h3><strong>Current Items</strong></h3>
             </div>
             <div className="card-body d-flex justify-content-around flex-wrap">
                 {cardItems}

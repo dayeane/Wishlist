@@ -48,14 +48,14 @@ function App() {
 //CRUD FETCHES
 
   //DELETE LIST FROM WISHLIST PAGE FETCH
-  const handleListDelete = (id) => {
-    fetch(`/lists/${id}`, {
-        method: "DELETE",
-        headers: {'Content-type':'application/json'}
-    })
-    .then(res => res.json())
-    .then(() => setLists(lists.filter(list => list.id !== id)))
-  }
+  // const handleListDelete = (id) => {
+  //   fetch(`/lists/${id}`, {
+  //       method: "DELETE",
+  //       headers: {'Content-type':'application/json'}
+  //   })
+  //   .then(res => res.json())
+  //   .then(() => setLists(lists.filter(list => list.id !== id)))
+  // }
 
   //DELETE ITEM FROM ITEM LIST FETCH
   const handleItemDelete = (id) => {
@@ -105,7 +105,8 @@ function App() {
         <Nav search={search} setSearch={setSearch} onLogout={onLogout}/> 
         <Switch>
           <Route path='/wishlist'>
-            <WishList userLists={listsDisplay} user={user} postList={postList} handleListDelete={handleListDelete}/>
+            <WishList userLists={listsDisplay} user={user} postList={postList} lists={lists} setLists={setLists}/>
+            {/* handleListDelete={handleListDelete} */}
           </Route>
           <Route path="/itemcontainer">
           <ItemContainer filteredItems={filteredItems} items={items} setItems={setItems} handleDelete={handleItemDelete} lists={listsDisplay} updateItem={updateItem}/>
