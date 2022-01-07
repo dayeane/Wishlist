@@ -18,7 +18,7 @@ function Nav({search, setSearch}) {
                             <Link to="/wishlist"><h5 style={{color:"white", margin: "auto", padding:"10px"}}>My Wishlists</h5></Link>
                         </li>
                         <li className="nav-item">
-                            <Link to="/itemcontainer"><h5 style={{color:"white", margin: "auto", padding:"10px"}}>View All Items</h5></Link>
+                            <Link to="/itemcontainer"><h5 style={{color:"white", margin: "auto", padding:"10px"}}>Current Items</h5></Link>
                         </li>
                     </ul>
                     <form className="form-inline my-2 my-lg-0">
