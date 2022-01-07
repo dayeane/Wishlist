@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react"
 import ListCard from "./ListCard"
 import ListItemCard from "./ListItemCard"
+import EmptyListDisplay from "./EmptyListDisplay"
+
 
 
 function WishList({userLists, user, postList, handleListDelete}){
@@ -14,6 +16,7 @@ function WishList({userLists, user, postList, handleListDelete}){
     function handleSubmit(e){
         e.preventDefault()
         postList(formData)
+        setFormData({name:"", user_id: user.id})
     }
     
     const itemsToDisplay = listItems.items 
@@ -27,7 +30,7 @@ function WishList({userLists, user, postList, handleListDelete}){
                 <form className="form-inline" style={{float:"right"}} onSubmit={handleSubmit}>
                     <div className="form-group mx-sm-3 mb-2">
                         <label style={{marginRight:"5px"}}><strong>Create a New List:</strong> </label>
-                        <input value={formData.name} name="name" type="input" className="form-control"  placeholder="Wishlist Name..." onChange={handleOnChange}/>
+                        <input value={formData.name} name="name" required="required" type="input" className="form-control"  placeholder="Wishlist Name..." onChange={handleOnChange}/>
                     </div>
                     <button type="submit" className="btn btn-primary mb-2">Create</button>
                 </form>
@@ -37,7 +40,7 @@ function WishList({userLists, user, postList, handleListDelete}){
             </div>
             <hr/>
             <div className="card-body d-flex justify-content-around flex-wrap">
-                {listItems ? listItemsDisplay : null}
+                {listItems ? listItemsDisplay : <EmptyListDisplay />}
             </div>
         </div>
     )
