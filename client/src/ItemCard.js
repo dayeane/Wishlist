@@ -23,14 +23,14 @@ function ItemCard({ id, name, description, image, price, handleDelete, lists, up
     }
 
     return (
-        <div className="card mt-3" style={{width: "18rem"}}>
+        <div className="card mt-3" style={{width: "18rem", }}>
             
-            <img className="card-img-top" src={image} alt='products'></img>
+            <img className="card-img-top" src={image} alt='products' style={{padding:"15px"}}></img>
             
             <div className="card-body">
                 <h2 className="card-text">{name}</h2>
                 <p className="card-text">{description}</p>
-                <p className="card-text">{price}</p>
+                <p className="card-text">${price}</p>
             </div>
             
             <div className="input-group">

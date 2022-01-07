@@ -37,46 +37,56 @@ function SignupForm({ setUser }) {
     });
   };
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
-        <h3 className="mt-6 mr-2 text-center">Sign Up</h3>
-        <p className="text-center">
-          <label className="mr-2" htmlFor="name">Name:</label>
-          <input
-            type="text"
-            name="name"
-            value={formData.name}
-            onChange={(e) => handleChange(e)}
-          />
-        </p>
-        <p className="text-center">
-          <label className="mr-2" htmlFor="email_address">Email:</label>
-          <input
-            type="text"
-            name="email_address"
-            value={formData.email_address}
-            onChange={(e) => handleChange(e)}
-          />
-        </p>
-        {/* <p>
-          <label htmlFor="password">Password </label>
-          <input
-            type="password"
-            name="password"
-            value={formData.password}
-            onChange={(e) => handleChange(e)}
-          />
-        </p> */}
-        <p className="text-center">
-          <button className="btn btn-primary mt-3 mb-3" type="submit">Sign Up</button>
-        </p>
-        
-        {/* <p>
-          <Link to="/">Log In</Link>
-        </p> */}
-      </form>
+    <div className="container">
+      <div className="row justify-content-center">
+        <div className="col-6">
+          <div className="card mt-2 " style={{borderRadius:"10px"}}>
+            <div className="card-header bg-primary" style={{color:"white"}}>
+            <h3 className="text-center">New User?</h3>
+            </div>
+            <h5 className="text-center mt-2" >Create Account:</h5>
+            <form onSubmit={handleSubmit}>
+              <p className="text-center mt-2">
+                <label className="mr-2" htmlFor="name">Name:</label>
+                <input
+                  type="text"
+                  name="name"
+                  value={formData.name}
+                  onChange={(e) => handleChange(e)}
+                />
+              </p>
+              <p className="text-center">
+                <label className="mr-2" htmlFor="email_address">Email:</label>
+                <input
+                  type="text"
+                  name="email_address"
+                  value={formData.email_address}
+                  onChange={(e) => handleChange(e)}
+                />
+              </p>
+              {/* <p>
+                <label htmlFor="password">Password </label>
+                <input
+                  type="password"
+                  name="password"
+                  value={formData.password}
+                  onChange={(e) => handleChange(e)}
+                />
+              </p> */}
+              <p className="text-center">
+                <button className="btn btn-primary mt-3 mb-3" type="submit">Sign Up</button>
+              </p>
+              
+              {/* <p>
+                <Link to="/">Log In</Link>
+              </p> */}
+            </form>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
 
 export default SignupForm;
+

@@ -17,11 +17,11 @@ function ListItemCard({id, list_id, name, price, description, image, setListItem
 
     return(
         <div className="card mt-3" style={{width: "18rem"}} id={id}>
-            <img className="card-img-top" src={image} alt='products'></img>
+            <img className="card-img-top" src={image} alt='products' style={{padding:"15px"}}></img>
             <div className="card-body">
                 <h2 className="card-text">{name}</h2>
                 <p className="card-text">{description}</p>
-                <p className="card-text">{price}</p>
+                <p className="card-text">${price}</p>
                 {/* <select name='wishlist' onChange={handleChange}>
                         <option>Select Wishlist</option>
                         {list.map(l => <option value={l.id} key={l.id}>{l.name} </option>)}
