@@ -28,9 +28,9 @@ function ItemCreateForm({items, setItems}){
   }
 
   return (
-    <div className='card mt-5'>
+    <div className='card mt-2 mb-2' style={{fontFamily:"dosis", borderRadius:"10px"}}>
       <div className="card-header">
-        <h2>Add a New Item</h2>
+        <h2><strong>Add a New Item</strong></h2>
       </div>
       <form onSubmit={handleNewItem} style={{padding: "20px"}}>
         <div className="form-row">

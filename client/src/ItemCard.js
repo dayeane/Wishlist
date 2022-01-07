@@ -30,7 +30,7 @@ function ItemCard({ id, name, description, image, price, handleDelete, lists, up
             <div className="card-body">
                 <h2 className="card-text">{name}</h2>
                 <p className="card-text">{description}</p>
-                <p className="card-text">${price}</p>
+                <p className="card-text"><strong>${price}</strong></p>
             </div>
             
             <div className="input-group">
