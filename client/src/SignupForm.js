@@ -58,7 +58,8 @@ function SignupForm({ setUser }) {
               <p className="text-center">
                 <label className="mr-2" htmlFor="email_address">Email:</label>
                 <input
-                  type="text"
+                  type="email"
+                  required="email"
                   name="email_address"
                   value={formData.email_address}
                   onChange={(e) => handleChange(e)}
