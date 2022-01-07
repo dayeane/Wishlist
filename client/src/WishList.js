@@ -7,7 +7,6 @@ function WishList({userLists, user, postList, handleListDelete}){
     const [listItems, setListItems] = useState([])
     const [formData, setFormData] = useState({name:"", user_id: user.id})
 
-    
     function handleOnChange(e){
         setFormData({...formData, [e.target.name]: e.target.value})
     }
