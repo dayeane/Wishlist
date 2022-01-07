@@ -10,10 +10,11 @@ function ItemCard({ id, name, description, image, price, handleDelete, lists, up
         setShowForm((prevShowForm) => !prevShowForm)
     }
 
-
     return (
         <div className="card mt-3" style={{width: "18rem"}}>
+            
             <img className="card-img-top" src={image} alt='products'></img>
+            
             <div className="card-body">
                 <h2 className="card-text">{name}</h2>
                 <p className="card-text">{description}</p>
@@ -26,6 +27,7 @@ function ItemCard({ id, name, description, image, price, handleDelete, lists, up
                     {lists.map(list => <option value={list.id} key={list.id} id={list.id}>{list.name} </option>)}
                 </select>
             </div>
+
             <button type="button" class="btn" style={{marginBottom:"10px", marginLeft:"15px", marginRight:"15px" }} onClick={handleEditClick}>Edit Item</button>
             <button type="button" class="btn btn-danger" style={{marginBottom:"10px", marginLeft:"15px", marginRight:"15px"}} onClick={() => handleDelete(id)}>Delete Item</button>
             

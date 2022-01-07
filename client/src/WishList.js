@@ -7,7 +7,6 @@ function WishList({userLists, user, postList, handleListDelete}){
     const [listItems, setListItems] = useState([])
     const [formData, setFormData] = useState({name:"", user_id: user.id})
 
-    
     function handleOnChange(e){
         setFormData({...formData, [e.target.name]: e.target.value})
     }
@@ -17,7 +16,6 @@ function WishList({userLists, user, postList, handleListDelete}){
         postList(formData)
     }
     
-
     const itemsToDisplay = listItems.items 
     const listItemsDisplay = itemsToDisplay?.map(item => <ListItemCard key={item.id} id={item.id} description={item.description} image={item.image_url} name={item.name} price={item.price}/>)
     const listsDisplay = userLists.map(list => <ListCard key={list.id} id={list.id} name={list.name} setListItems={setListItems} handleListDelete={handleListDelete} />)

@@ -4,8 +4,6 @@ import ItemCreateForm from './ItemCreateForm'
 
 function ItemContainer({filteredItems, items, setItems, handleDelete, lists, updateItem}) {
 
-
-    
     const cardItems = filteredItems.map(item => 
         <ItemCard 
             key={item.id} 

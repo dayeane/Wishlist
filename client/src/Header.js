@@ -8,7 +8,6 @@ function Header({user, onLogout}) {
         }).then(() => onLogout());
       }
 
-
     return (
         <nav className="navbar navbar-expand-lg navbar-light d-flex justify-content-between">
             <Link to="/"><h1 style={{color:"black", margin: "auto", marginTop:"10px", padding:"10px", fontFamily:"yellowtail"}}>The Wishlist!<span class="sr-only">(current)</span></h1></Link>

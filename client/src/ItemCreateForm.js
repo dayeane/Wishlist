@@ -24,21 +24,19 @@ function ItemCreateForm({items, setItems}){
     })
     .then(res => res.json())
     .then(createdItem => setItems([...items, createdItem]))
-
     e.currentTarget.reset()
-
   }
-
 
   return (
     <div className='card mt-5'>
-      <div className="card-header"><h2>Add a New Item</h2></div>
+      <div className="card-header">
+        <h2>Add a New Item</h2>
+      </div>
       <form onSubmit={handleNewItem} style={{padding: "20px"}}>
         <div class="form-row">
           <div class="form-group col-md-6">
             <input className="form-control" placeholder="Name" ref={name} type="text" id="name" name="name" />
           </div>
-          
           <div class="form-group col-md-6">
             <input className="form-control"  placeholder="Description" ref={description} type="text" id="description" name="description" />
           </div>
@@ -47,15 +45,12 @@ function ItemCreateForm({items, setItems}){
           <div class="form-group col-md-6">
             <input className="form-control" placeholder="Image_url" ref={image_url} type="text" id="image_url" name="image_url" />
           </div>
-
           <div class="form-group col-md-6">
             <input className="form-control" placeholder="Price" ref={price} type="text" id="price" name="price" />
           </div>
         </div>
         <button className="btn btn-primary mt-3 mb-3" type="submit" value="Add Item">Submit</button>
-
-      </form>
-           
+      </form>  
     </div>
   )
     
