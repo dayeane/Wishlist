@@ -22,7 +22,7 @@ function Login({ onLogin }) {
           <div className="col-8" >
             <div class="card mt-5" style={{borderRadius:"10px", fontFamily:"dosis"}}>
               <div class="card-header bg-primary" style={{color:"white"}} >
-                <h3 className="text-center" >Welcome to the Wishlist App!</h3>
+                <h3 className="text-center" >Welcome to the Wishlist!</h3>
               </div>
               <h5 className="text-center mt-2" >User Login:</h5>
                 <form  onSubmit={handleSubmit}>
