@@ -10,6 +10,7 @@ Item.destroy_all
 
 
 
+
   Item.create(name: "Survival Kit 28 in 1", price: 27, description: "Our emergency kit contains the most popular camping accessories: Pen, Compass, Flashlight, Pocket Bellow, Bottle Hanging Buckle, Knife, 8 in1 Multi-use Spork, and more!", image_url: "https://m.media-amazon.com/images/I/81TInkWElLL._AC_SL1500_.jpg")
   Item.create(name: "Useless Box", price: 10, description: "Just press the switch, the box opens, a finger pops up and closes the button, and the box closes automatically, which brings you unlimited fun.", image_url: "https://m.media-amazon.com/images/I/61rDEBAJBTL._AC_SL1500_.jpg")
   Item.create(name: "Grow a Boyfriend Novelty", price: 6, description: "It's not pretend when you grow the perfect friend, add water, grows to 6-times original size 2-inches to approximately 12-inches", image_url: "https://m.media-amazon.com/images/I/61l+XIXacfS._AC_SL1109_.jpg")
@@ -36,6 +37,7 @@ Item.destroy_all
 
 
   
+
 
 ["Nicholas", "Ryan", "Dayeane"].each do |name|
   p "creating User #{name}"

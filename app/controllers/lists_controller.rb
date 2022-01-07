@@ -28,8 +28,13 @@ class ListsController < ApplicationController
 
   def add_item
     list = List.find(params[:list_id])
-    list.items << item
-    render json: list.reload, serializer: ListItemSerializer, status: :ok
+
+    if list.items.find_by(id: item.id)
+      render json: { error: "Item already exist" }, status: :unprocessable_entity
+    else
+      list.items << item
+      render json: list.reload, serializer: ListItemSerializer, status: :ok
+    end
   end
 
   def remove_item
