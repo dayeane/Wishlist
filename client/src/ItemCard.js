@@ -10,6 +10,18 @@ function ItemCard({ id, name, description, image, price, handleDelete, lists, up
         setShowForm((prevShowForm) => !prevShowForm)
     }
 
+    function addItemToList(e) {
+        e.preventDefault()
+        const list_id = e.currentTarget.value
+        
+        fetch(`lists/${list_id}/add_item?item_id=${id}`, {
+            method: 'POST',
+            headers: {'Content-Type':'application/json'}
+          })
+          .then(res => res.json())
+          .then(res => console.log(res))
+    }
+
     return (
         <div className="card mt-3" style={{width: "18rem"}}>
             
@@ -21,15 +33,16 @@ function ItemCard({ id, name, description, image, price, handleDelete, lists, up
                 <p className="card-text">{price}</p>
             </div>
             
-            <div class="input-group">
-                <select class="custom-select" style={{marginBottom:"10px", marginLeft:"15px", marginRight:"15px"}} id="inputGroupSelect04">
+            <div className="input-group">
+                <select onChange={addItemToList} className="custom-select" style={{marginBottom:"10px", marginLeft:"15px", marginRight:"15px"}} id="inputGroupSelect04">
                     <option value="Add to wishlist">Add Item to Wishlist</option>
                     {lists.map(list => <option value={list.id} key={list.id} id={list.id}>{list.name} </option>)}
                 </select>
             </div>
 
-            <button type="button" class="btn" style={{marginBottom:"10px", marginLeft:"15px", marginRight:"15px" }} onClick={handleEditClick}>Edit Item</button>
-            <button type="button" class="btn btn-danger" style={{marginBottom:"10px", marginLeft:"15px", marginRight:"15px"}} onClick={() => handleDelete(id)}>Delete Item</button>
+            <button type="button" className="btn" style={{marginBottom:"10px", marginLeft:"15px", marginRight:"15px" }} onClick={handleEditClick}>Edit Item</button>
+            <button type="button" className="btn btn-danger" style={{marginBottom:"10px", marginLeft:"15px", marginRight:"15px"}} onClick={() => handleDelete(id)}>Delete Item</button>
+
             
             <div>
                 {showForm ? <EditItemForm id={id} name={name} description={description} image={image} price={price} updateItem={updateItem}/> : null}

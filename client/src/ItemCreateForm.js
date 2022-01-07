@@ -33,19 +33,21 @@ function ItemCreateForm({items, setItems}){
         <h2>Add a New Item</h2>
       </div>
       <form onSubmit={handleNewItem} style={{padding: "20px"}}>
-        <div class="form-row">
-          <div class="form-group col-md-6">
+        <div className="form-row">
+          <div className="form-group col-md-6">
             <input className="form-control" placeholder="Name" ref={name} type="text" id="name" name="name" />
           </div>
-          <div class="form-group col-md-6">
+
+          <div className="form-group col-md-6">
             <input className="form-control"  placeholder="Description" ref={description} type="text" id="description" name="description" />
           </div>
         </div>
-        <div class="form-row">
-          <div class="form-group col-md-6">
+        <div className="form-row">
+          <div className="form-group col-md-6">
             <input className="form-control" placeholder="Image_url" ref={image_url} type="text" id="image_url" name="image_url" />
           </div>
-          <div class="form-group col-md-6">
+
+          <div className="form-group col-md-6">
             <input className="form-control" placeholder="Price" ref={price} type="text" id="price" name="price" />
           </div>
         </div>

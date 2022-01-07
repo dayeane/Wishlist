@@ -34,8 +34,8 @@ function EditItemForm({id, name, description, image, price, updateItem}){
                     <input type="number" className="form-control"  placeholder="Price..." name="price" value={formData.price} onChange={handleOnChange}/>
                 </div> 
                 <div className="form-group" style={{marginBottom:"5px", marginLeft:"15px"}}>
-                 <button type="submit" className="btn btn-secondary" >Submit Edit</button>
-                 </div>
+                    <button type="submit" className="btn btn-secondary" >Submit Edit</button>
+                </div>
             </form>
         </div>
     )
