@@ -39,9 +39,9 @@ function SignupForm({ setUser }) {
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <h1 className="mt-6 mr-2">Sign Up</h1>
-        <p>
-          <label className="mr-2" htmlFor="name">Name</label>
+        <h3 className="mt-6 mr-2 text-center">Sign Up</h3>
+        <p className="text-center">
+          <label className="mr-2" htmlFor="name">Name:</label>
           <input
             type="text"
             name="name"
@@ -49,8 +49,8 @@ function SignupForm({ setUser }) {
             onChange={(e) => handleChange(e)}
           />
         </p>
-        <p>
-          <label className="mr-2" htmlFor="email_address">Email </label>
+        <p className="text-center">
+          <label className="mr-2" htmlFor="email_address">Email:</label>
           <input
             type="text"
             name="email_address"
@@ -67,10 +67,10 @@ function SignupForm({ setUser }) {
             onChange={(e) => handleChange(e)}
           />
         </p> */}
-        <p>
+        <p className="text-center">
           <button className="btn btn-primary mt-3 mb-3" type="submit">Sign Up</button>
         </p>
-        <p>Have an account?</p>
+        
         {/* <p>
           <Link to="/">Log In</Link>
         </p> */}
