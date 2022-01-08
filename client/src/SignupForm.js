@@ -5,7 +5,8 @@ function SignupForm({ setUser }) {
   const [formData, setFormData] = useState({
     name: "",
     email_address: "",
-    // password: "",
+    password: "",
+    password_confirmation: ""
   });
 
   const handleChange = (e) => {
@@ -46,41 +47,51 @@ function SignupForm({ setUser }) {
             </div>
             <h5 className="text-center mt-2" >Create Account:</h5>
             <form onSubmit={handleSubmit}>
-              <p className="text-center mt-2">
-                <label className="mr-2" htmlFor="name">Name:</label>
+              <div className="col-12">
+                <label className="col-6 text-right" htmlFor="name">Name:</label>
                 <input
+                  className="col-3"
                   type="text"
                   name="name"
                   value={formData.name}
                   onChange={(e) => handleChange(e)}
                 />
-              </p>
-              <p className="text-center">
-                <label className="mr-2" htmlFor="email_address">Email:</label>
+              </div>
+              <div className="col-12">
+                <label className="col-6 text-right" htmlFor="email_address">Email:</label>
                 <input
+                  className="col-3"
                   type="email"
                   required="email"
                   name="email_address"
                   value={formData.email_address}
                   onChange={(e) => handleChange(e)}
                 />
-              </p>
-              {/* <p>
-                <label htmlFor="password">Password </label>
+              </div>
+              <div className="col-12">
+                <label className="col-6 text-right" htmlFor="password">Password:</label>
                 <input
+                  className="col-3"
                   type="password"
                   name="password"
                   value={formData.password}
                   onChange={(e) => handleChange(e)}
                 />
-              </p> */}
-              <p className="text-center">
+              </div>
+              <div className="col-12">
+                <label className="col-6 text-right" htmlFor="password">Password Confirmation: </label>
+                <input
+                  className="col-3"
+                  type="password"
+                  name="password_confirmation"
+                  value={formData.password_confirmation}
+                  onChange={(e) => handleChange(e)}
+                  autoComplete="current-password"
+                />
+              </div>
+              <div className="text-center">
                 <button className="btn btn-primary mt-3 mb-3" type="submit">Sign Up</button>
-              </p>
-              
-              {/* <p>
-                <Link to="/">Log In</Link>
-              </p> */}
+              </div>
             </form>
           </div>
         </div>
