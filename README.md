@@ -16,12 +16,14 @@ $ rails db:seed
 $ rails s
 ```
 Launch frontend
+ - (In a seperate terminal)
 ```
 $ cd client/
 $ npm install
 $ npm start
 ```
 Navigate
+ -In browser
 ```
 localhost:3000/
 ```
@@ -66,20 +68,15 @@ Users can:
 - View order history
 
 
-### Video Demo
-https://www.youtube.com/watch?v=QDb5Xh7JmSo&t=6s
-
 ## Created By
 
-### Garrett Strohm
-- Github: <a href="https://github.com/garrettstrohm/">garrettstrohm</a>
-- LinkedIn: <a href='https://www.linkedin.com/in/gstrohm/'>Garrett Strohm's LinkedIn</a>
-- Email: <a href='mailto: garres4@vt.edu'>garres4@vt.edu</a>
-- Medium: <a href='https://medium.com/@garres4'>@garres4</a>
+### Dayeane Cortes
+- Github: <a href="https://github.com/dayeane">dayeane</a>
+- LinkedIn: <a href='https://www.linkedin.com/in/dayeane-cortes-030612b4/'>Dayeane Cortes LinkedIn</a>
 
-### Bubba Godinet
-- Github: <a href="https://github.com/BubbaGodinet/">BubbaGodinet</a>
-- LinkedIn: <a href="https://www.linkedin.com/in/vito-godinet-5a7113177/">Bubba Godinet's LinkedIn</a>
+### Ryan Kotsovolos
+- Github: <a href="https://github.com/Rkotsovolos">Rkotsovolos</a>
+- LinkedIn: <a href="https://www.linkedin.com/in/rkotsovolos/">Ryan Kotsovolos' LinkedIn</a>
 
 ### Nicholas Fagner
 - Github: <a href="https://github.com/geosynchro">geosynchro</a>
