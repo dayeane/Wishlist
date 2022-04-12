@@ -1,4 +1,4 @@
-# The Wishlist Site
+# The Wishlist App
 
 The Wishlist app is a lightweight user friendly application designed to let users create and curate shopping lists.  A straightforward organizational tool at its core, The Wishlist's list functionality has the potential to be applied across a variety of use cases.
 
@@ -49,29 +49,38 @@ localhost:3000/
 <img width="1680" alt="WIshlist Homepage " src="https://user-images.githubusercontent.com/42919853/162264063-5153cda3-4fd6-41cd-ab64-e8b2e2c7964b.png">
 
 
+### Items Page
+- The Current Items page displays all the current items included in the Item inventory
+- Users can:
+  - View all Items currently in the app
+  - Search all current items
+  - Add Items to created wishlists
+  - Delete Item from Items list
+  - Edit Items
+  - Create new items
+
+<img width="1680" alt="Wishlist ItemPage Header" src="https://user-images.githubusercontent.com/42919853/163036577-778cd592-ef48-43f1-8a1e-dfb9c946bda8.png">
+
+#### Full Item Card Display
+<img width="1680" alt="WIshlist Item full display" src="https://user-images.githubusercontent.com/42919853/163036640-0b51e6a7-2407-4e90-9bcb-a113fa20c5f2.png">
+
+#### Create new item form
+<img width="1680" alt="Wishlist Item add form" src="https://user-images.githubusercontent.com/42919853/163037318-79e807c0-4143-4574-bc50-e14bf93a963f.png">
 
 
 
 
-### Cart
-Users can:
-- Delete items from cart
-- Proceed to checkout
 
-<img width="1437" alt="Screen Shot 2022-01-31 at 3 33 49 PM" src="https://user-images.githubusercontent.com/89401426/151885201-72b271a3-9479-4bb1-ac5c-d4099472517f.png">
+### My Wishlists Page
+- The Wishlist page displays all current active Wishlists created by the user
+- The user can:
+  - Create new wishlists
+  - Delete entire wishlists and associated items
+  - View all current items in selected wishlist
+  - Delete individual items from any selected wishlist
 
+<img width="1680" alt="My Wishlists Page" src="https://user-images.githubusercontent.com/42919853/163038856-d7b4fba8-e925-4269-939a-75e0b7f6ae80.png">
 
-### Checkout
-Users can:
-- Fill out a three part form and confirm their order
-
-
-![Screen Shot 2022-01-31 at 3 43 03 PM](https://user-images.githubusercontent.com/89401426/151885319-b81efa0f-62c2-4d73-b7d3-0858b094d5d8.png)
-
-
-### Order History
-Users can: 
-- View order history
 
 
 ## Created By
