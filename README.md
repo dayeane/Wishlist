@@ -8,6 +8,11 @@ This project uses the following technologies:
 - Backend: Ruby on Rails, Postgresql, ActiveRecord
 
 ## Launch
+
+Deployed Version: https://fi-wishlist.herokuapp.com/
+
+Or
+
 Launch backend
 ```
 $ bundle install
