@@ -13,7 +13,9 @@ Deployed Version: https://fi-wishlist.herokuapp.com/
 
 Or
 
+After cloning repository:
 Launch backend
+
 ```
 $ bundle install
 $ rails db:migrate
